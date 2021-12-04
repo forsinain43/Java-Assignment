@@ -29,7 +29,7 @@
             <Label text="Password: "/>
             <PasswordField fx:id="pass"/>
 
-            <Button fx:id="register" onAction="#register" mnemonicParsing="false" text="Register"/>
+            <Button fx:id="submit" onAction="#register" mnemonicParsing="false" text="Register"/>
             <Label fx:id="response"/>
         </VBox>
 </GridPane>
