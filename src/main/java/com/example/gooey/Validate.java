@@ -1,12 +1,9 @@
 package com.example.gooey;
 import java.util.regex.Pattern;
-import java.util.regex.Matcher;
 
 public class Validate {
     private final String email;
     private final String pass;
-
-    private static Matcher matches;
 
     private static final Pattern passLetters = Pattern.compile("[a-z A-Z]");
     private static final Pattern passDigits = Pattern.compile("[\\d]");
