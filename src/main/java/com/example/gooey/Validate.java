@@ -7,20 +7,12 @@ public class Validate {
 
     private static final Pattern passLetters = Pattern.compile("[a-z A-Z]");
     private static final Pattern passDigits = Pattern.compile("[\\d]");
-    private static final Pattern passSymbols = Pattern.compile("[*!?&@%]");
+    private static final Pattern passSymbols = Pattern.compile("[*^&@!?]");
     private static final Pattern emailSyntax = Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
 
     public Validate(String email, String pass) {
         this.email = email;
         this.pass = pass;
-    }
-
-    public String getEmail() {
-        return this.email;
-    }
-
-    public String getPass() {
-        return this.pass;
     }
 
     public boolean validEmail() {
