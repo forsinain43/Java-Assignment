@@ -1,13 +1,14 @@
-package com.example.gooey;
+package com.example.test;
 
+import com.example.gooey.Validate;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class Test {
     @ParameterizedTest
-    @ValueSource(strings = {""});
-    public void invalidEmail(string emails) {
+    @ValueSource(strings = {"", "mikl", "@", "@gmail.com", ""})
+    public void invalidEmail(String emails) {
         Validate test = new Validate(emails, "Beansbeans123!");
         assertFalse(test.validEmail());
     }
